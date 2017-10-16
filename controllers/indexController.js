@@ -43,7 +43,6 @@ module.exports = {
         // Delete model instance from DB
         Eneida.findByIdAndRemove(req.body.id, function (err, ignore_res) {
             if (err) return handleError(err);
-            // console.log('deleted');
             //render page
             Eneida.find((err, dbres) => {
                 if (err) return err;
