@@ -39,6 +39,7 @@ module.exports = {
         })
     },
     deleteQuote: (req, res, next) => {
+        console.log(req.body);
         // Delete model instance from DB
         Eneida.findByIdAndRemove(req.body.id, function (err, ignore_res) {
             if (err) return handleError(err);
